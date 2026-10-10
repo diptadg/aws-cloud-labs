@@ -1,0 +1,54 @@
+# --- local config and secrets: never commit ---------------------------------
+.env
+*.env
+!config.example.env
+lab.env
+lab.env.bak
+*.pem
+*.key
+.aws/
+credentials
+.ssh/
+
+# --- Python ------------------------------------------------------------------
+labenv/
+venv/
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# --- archives ----------------------------------------------------------------
+*.zip
+*.tar.gz
+
+# --- files the scripts generate ---------------------------------------------
+# Lab 3/4/6: local copy of the bucket tree, restore target, encrypted copies
+rootdir/
+restored/
+*.aes.enc
+*.aes.dec
+*.kms.enc
+*.kms.dec
+bucket_policy_backup_*.json
+# Lab 2: state file
+*.state
+# Lab 8: notebook filled in with your values, and the dataset it downloads
+LabAI_*.ipynb
+*.ipynb
+bank-additional*
+train.csv
+validation.csv
+test.csv
+# Lab 9: supply your own images; only the placeholder note is tracked
+lab-09-comprehend-rekognition/images/*
+!lab-09-comprehend-rekognition/images/PUT_IMAGES_HERE.txt
+# logs
+*.log
+
+# --- editors / OS ------------------------------------------------------------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*:Zone.Identifier

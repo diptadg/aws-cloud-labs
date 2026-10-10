@@ -1,0 +1,14 @@
+# Local Python dependencies for the lab scripts. Install into a virtualenv:
+#   python3 -m venv ~/cits5503/.venv && ~/cits5503/.venv/bin/pip install -r requirements.txt
+#
+# Django, Jupyter and the SageMaker SDK are not listed: they are installed on
+# the EC2 instance (Labs 6-7) or inside the container image (Lab 8) by the
+# scripts themselves.
+
+boto3>=1.34          # every lab (brings botocore); last used with 1.43.89
+pycryptodome>=3.19   # Lab 4, imported as Crypto
+fabric>=3.2          # Lab 7, brings invoke and paramiko
+
+# Optional - Lab 9 uses these for language names if present, else a built-in table
+# babel
+# pycountry
