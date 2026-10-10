@@ -1,0 +1,26 @@
+Save the four Lab 9 images into this directory before running lab9_bucket.py.
+
+The lab sheet pairs each image with exactly one analysis, and asks for only
+that analysis on that image:
+
+  urban.jpg   an urban setting             label recognition
+  beach.jpg   a person on a beach          image moderation
+  faces.jpg   people showing their faces   facial analysis
+  text.jpg    an image containing text     text extraction
+
+The lab sheet links a source for each one. Two of the four figures on the sheet
+are PNGs even though the sheet names the objects .jpg, so a .jpg, .jpeg or .png
+file with the right stem is accepted here - the object is stored in S3 under the
+name above either way, and Rekognition reads the format from the bytes rather
+than from the key.
+
+What Rekognition will reject:
+  - anything that is not JPEG or PNG (a WebP or HEIC renamed .jpg fails)
+  - anything under 80 pixels on either side
+  - anything over 15 MB
+
+Check all four without uploading:
+
+  python3 lab9_bucket.py --check
+
+This file is only a placeholder and can be deleted once the images are here.
